@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defined and Enforced Cybersecurity Roles</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <style>
+        .question-group {
+            margin-bottom: 15px;
+        }
+        .question-group label {
+            font-weight: bold;
+        }
+        .question-group textarea, .question-group input {
+            width: 100%;
+            resize: vertical;
+        }
+        .person-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .saved-person {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .saved-person strong {
+            display: block;
+        }
+        .editing-indicator {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <!-- Navigation will be loaded here by navigation.js -->
+        </nav>
+        <main class="content" id="main-content">
+            <h2>Defined and Enforced Cybersecurity Roles</h2>
+            <form id="cybersecurity-roles-form">
+                <div id="editing-indicator" class="editing-indicator"></div>
+                <div id="questions-container">
+                    <!-- Is cybersecurity integrated into enterprise risk management? -->
+                    <div class="question-group">
+                        <label for="integrated-enterprise-risk-management">Is cybersecurity integrated into enterprise risk management?</label>
+                        <textarea id="integrated-enterprise-risk-management" name="integrated-enterprise-risk-management"></textarea>
+                    </div>
+
+                    <!-- List peoples' names, responsibilities, and authorities -->
+                    <div class="question-group">
+                        <label for="people-responsibilities">List peoples' names, responsibilities related to cybersecurity risk, and authorities.</label>
+                        <div id="person-inputs" class="person-input-group" style="display: none;">
+                            <input type="text" id="person-name" placeholder="Name">
+                            <input type="text" id="person-responsibilities" placeholder="Responsibilities">
+                            <input type="text" id="person-authority" placeholder="Authority">
+                            <button type="button" id="save-person-btn">Save Person</button>
+                        </div>
+                        <button type="button" id="add-person-btn">Add Person</button>
+                    </div>
+
+                    <!-- Added people displayed here -->
+                    <div id="people-list-section">
+                        <h4>People's Names, Responsibilities, and Authorities</h4>
+                        <div id="people-list"></div>
+                    </div>
+
+                    <!-- Other questions -->
+                    <div class="question-group">
+                        <label for="senior-management-involvement">What types of cybersecurity risks would require involvement from senior management?</label>
+                        <textarea id="senior-management-involvement" name="senior-management-involvement"></textarea>
+                    </div>
+                    <div class="question-group">
+                        <label for="escalation-thresholds">What specific events or thresholds would require us to escalate a cybersecurity risk?</label>
+                        <textarea id="escalation-thresholds" name="escalation-thresholds"></textarea>
+                    </div>
+                    <div class="question-group">
+                        <label for="inform-involved">Who in the organization needs to be informed or involved when a cybersecurity risk is escalated?</label>
+                        <textarea id="inform-involved" name="inform-involved"></textarea>
+                    </div>
+                    <div class="question-group">
+                        <label for="escalation-timeline">How quickly should the escalation process happen once a risk reaches a critical level?</label>
+                        <textarea id="escalation-timeline" name="escalation-timeline"></textarea>
+                    </div>
+                    <div class="question-group">
+                        <label for="responsible-escalation">Who is responsible for initiating the escalation process when these triggers occur?</label>
+                        <textarea id="responsible-escalation" name="responsible-escalation"></textarea>
+                    </div>
+                    <div class="question-group">
+                        <label for="escalation-documentation">How will we document the escalation process?</label>
+                        <textarea id="escalation-documentation" name="escalation-documentation"></textarea>
+                    </div>
+                    <div class="question-group">
+                        <label for="escalation-review">How often will we review and update the escalation process?</label>
+                        <textarea id="escalation-review" name="escalation-review"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="saveCybersecurityRolesData()">Save</button>
+            </form>
+
+            <!-- Saved Data Section -->
+            <div class="saved-data">
+                <h3>Saved Cybersecurity Roles Data</h3>
+                <div id="saved-roles-list"></div>
+            </div>
+        </main>
+    </div>
+    <script src="../../../navigation.js"></script>
+    <script src="defined-and-enforced-cybersecurity-roles.js"></script>
+</body>
+</html>

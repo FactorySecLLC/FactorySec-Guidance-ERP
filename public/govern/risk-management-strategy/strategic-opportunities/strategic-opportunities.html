@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Opportunities</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <style>
+        .question-group {
+            margin-bottom: 15px;
+        }
+        .question-group label {
+            font-weight: bold;
+        }
+        .question-group textarea {
+            width: 100%;
+            height: 60px;
+            resize: vertical;
+        }
+        .editing-indicator {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <!-- Navigation will be loaded here by navigation.js -->
+        </nav>
+        <main class="content" id="main-content">
+            <h2>Strategic Opportunities</h2>
+            <form id="strategic-opportunities-form">
+                <div id="editing-indicator" class="editing-indicator"></div>
+                <div id="questions-container">
+                    <!-- Opportunities Identification -->
+                    <div class="question-group">
+                        <label for="methods-frameworks">What methods or frameworks (e.g., SWOT analysis) do you currently use to identify strategic opportunities within your manufacturing processes?</label>
+                        <textarea id="methods-frameworks" name="methods-frameworks"></textarea>
+                    </div>
+                    <div class="question-group">
+                        <label for="examples-opportunities">Can you provide examples of opportunities identified in past risk discussions?</label>
+                        <textarea id="examples-opportunities" name="examples-opportunities"></textarea>
+                    </div>
+                    <!-- Guidance and Communication -->
+                    <div class="question-group">
+                        <label for="guidance-communication">How is the guidance for identifying and discussing opportunities communicated within your organization?</label>
+                        <textarea id="guidance-communication" name="guidance-communication"></textarea>
+                    </div>
+                    <div class="question-group">
+                        <label for="responsible-guidance">Who is responsible for defining and communicating this guidance?</label>
+                        <textarea id="responsible-guidance" name="responsible-guidance"></textarea>
+                    </div>
+                    <!-- Stretch Goals -->
+                    <div class="question-group">
+                        <label for="stretch-goals">Have you set any stretch goals related to your manufacturing processes? If so, what are they, and how are they documented?</label>
+                        <textarea id="stretch-goals" name="stretch-goals"></textarea>
+                    </div>
+                    <!-- Risk Prioritization -->
+                    <div class="question-group">
+                        <label for="risk-prioritization">How do you calculate, document, and prioritize positive risks alongside negative risks in your risk management practices?</label>
+                        <textarea id="risk-prioritization" name="risk-prioritization"></textarea>
+                    </div>
+                    <div class="question-group">
+                        <label for="examples-positive-risks">Can you provide examples of positive risks that have been prioritized and the outcomes of those decisions?</label>
+                        <textarea id="examples-positive-risks" name="examples-positive-risks"></textarea>
+                    </div>
+                    <!-- Documentation and Review -->
+                    <div class="question-group">
+                        <label for="documentation-review">How often are the identified opportunities and associated risks reviewed and updated in your risk management discussions?</label>
+                        <textarea id="documentation-review" name="documentation-review"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="saveStrategicOpportunitiesData()">Save</button>
+            </form>
+            <div class="saved-data">
+                <h3>Saved Strategic Opportunities</h3>
+                <div id="saved-opportunities-list"></div>
+            </div>
+        </main>
+    </div>
+    <script src="../../../navigation.js"></script>
+    <script src="strategic-opportunities.js"></script>
+</body>
+</html>
